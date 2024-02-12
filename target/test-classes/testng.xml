@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <parameter name="username" value="standard_use"/>
-    <parameter name="password" value="secret_sauce"/>
-    <test name="Login">
-       <classes>
-           <class name="glueCode.test_productlistingPage"/>
+<listeners>
+    <listener class-name="utility.iTestListenerImpl"/>
+</listeners>
+     <test name="Login-CHROME">
+         <parameter name="browser-name" value="chrome"/>
+         <parameter name="password" value="secret"/>
+        <classes>
+            <class name="runner.testRunner"></class>
+<!--               <methods>-->
+<!--                   <include name="runCucumber"/>-->
+<!--               </methods>-->
+<!--           </class>-->
        </classes>
     </test>
 </suite>

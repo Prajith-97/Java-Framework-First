@@ -13,10 +13,15 @@ public class readDataFromJson {
             JSONParser jsonParse = new JSONParser(); //creating a json parser object
             //parsing content of json file
             JSONObject jsonObj = (JSONObject) jsonParse.parse(new FileReader("C:\\JavaIntellij\\Framework\\src\\test\\resources\\browserDetails.json"));
+
+            //get dictionary
+//            JSONObject dict = (JSONObject) jsonObj.get(dictName);//need to pass from the method
+//            dict.get(key);
             //reading values
+
             return (String) jsonObj.get(key);
 
-        }
+    }
 
     }
 
